@@ -1,6 +1,16 @@
 # reactNativeCodeRepo
 리액트네이티브 공부용 저장소
 
+각 폴더마다 여러 주제로 리액티 네이티브 앱을 만듬
+
+## 1. LearnReacNative - HelloWorld 출력
+ - ### 환경 설정 - 에러
+     - 환경설정 관련하여 많은 에러를 겪음. JDK,  SDK 오류 등 꽤 많은 문제를 겪어서 Hello Wolrd! 이거 출력하는데 시간이 걸림
+     - 구글 서칭 과정에 괜찮은 해결 방법이 있었는데 그건 바로
+     - npx @react-native-community/cli doctor 임 해당 명령을 하면 내가 리액트 네이티브 관련하여 세팅하는 문제점을 체크리스트 형태로 보여줌 많은 도움이 되었음.
+     - 새부 사항 독스에 있음 -> https://reactnative.dev/blog/2019/11/18/react-native-doctor 
+## 2. TodoApp - 투두리스트 앱
+
 ## Getting Started
 
 ```bash
