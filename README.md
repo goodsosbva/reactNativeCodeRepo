@@ -17,9 +17,14 @@
 - ### 구현 중 문제점
 
   - Unable to resolve module 'react-native-vector-icons/FontAwesome 에러
+
     -> 해결 방법: react-native start --reset-cache (https://github.com/oblador/react-native-vector-icons/issues/544)
+
+
   - NativeModule: AsyncStorage is null 에러
+
     -> 해결 방법: (https://github.com/react-native-async-storage/async-storage/issues/768)
+
     The most common issue with AsyncStorage is null is because the app was not rebuild after installing the library. And I don't mean to restart bundler, but rather install an app on the device/simulator. So best way to handle this is:
 
     - Remove app from simulator/device
