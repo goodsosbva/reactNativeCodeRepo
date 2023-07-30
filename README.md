@@ -29,6 +29,26 @@
 
     - Remove app from simulator/device
     - Install app again
+   
+## 3. 네비게이션 어러 개념 학습
+
+ - ### 구현 중 문제
+    - Property 'require' doesn't exist react native metro bundler
+    - 해결 방법:
+        In .eslintrc.js file write the next:
+              module.exports = {
+              root: true,
+              parser: '@babel/eslint-parser',
+              requireConfigFile: false,
+              extends: '@react-native-community',
+              };
+              In babel.config.js file write the next:
+              module.exports = {
+              presets: ['module:metro-react-native-babel-preset'],
+              };
+              Then restart the project with clearing the cache with the next command:
+              npm start -- --reset-cache
+      - 출처: https://github.com/facebook/react-native/issues/34828
 
 ## Getting Started
 
