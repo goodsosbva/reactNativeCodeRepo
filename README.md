@@ -29,6 +29,48 @@
 
     - Remove app from simulator/device
     - Install app again
+   
+## 3. 네비게이션 어러 개념 학습
+
+ - ### 구현 중 문제
+    - 에러: Property 'require' doesn't exist react native metro bundler
+    - 해결 방법:
+        In .eslintrc.js file write the next:
+      ```javaSacript
+              module.exports = {
+              root: true,
+              parser: '@babel/eslint-parser',
+              requireConfigFile: false,
+              extends: '@react-native-community',
+              };
+      
+              In babel.config.js file write the next:
+              module.exports = {
+              presets: ['module:metro-react-native-babel-preset'],
+              };
+      ```
+              Then restart the project with clearing the cache with the next command:
+              npm start -- --reset-cache
+      - 출처: https://github.com/facebook/react-native/issues/34828
+     
+    - 에러:
+    
+      Error: Failed to create a worklet. Did you forget to add Reanimated Babel plugin in babel.config.js? See installation docs at https://docs.swmansion.com/react-native-              
+              reanimated/docs/fundamentals/installation#babel-plugin., js engine: hermes LOG Running "learnNavigation" with {"rootTag":11}
+
+
+    - 해결 방법:
+        #### 1. 발생 상황
+              react-native-reanimated 패키지를 추가하면서 발생
+        #### 2. 발생 원인
+          babel.config.js에 reanimated 플러그인을 추가해주지않아서 발생
+        #### 3. 해결 방안
+          ```javaScript
+            module.exports = {
+            presets: ['module:metro-react-native-babel-preset'],
+            plugins: ['react-native-reanimated/plugin'], // 추가
+            };
+          ```
 
 ## Getting Started
 
